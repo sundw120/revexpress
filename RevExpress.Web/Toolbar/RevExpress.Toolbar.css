@@ -1,0 +1,64 @@
+﻿
+/* 依赖layui.css 在引用本样式前，请引入layui.css */
+
+.menubar {
+    width: 100%;
+}
+
+    .menubar div[toptools] {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .menubar a {
+        font-size: 14px;
+    }
+
+
+    .menubar label[line-separator] {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #999;
+    }
+
+    .menubar div[line-help] {
+        padding-top: 8px;
+    }
+
+        .menubar div[line-help] a {
+            color: #999999;
+        }
+
+    .menubar div[bottomtools] {
+        width: 100%;
+        float: left;
+    }
+
+    .menubar div[option] {
+        padding-top: 5px;
+        color: #999999;
+        font-size: 12px;
+        padding-left: 5px;
+        float: left;
+    }
+
+    .menubar div[buttons] {
+        float: right;
+        padding-top: 5px;
+    }
+
+        .menubar div[buttons] ul {
+            list-style: none;
+        }
+
+            .menubar div[buttons] ul li {
+                list-style: none;
+                float: left;
+                padding: 10px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                border: 1px solid #f1f1f1;
+                background: #f9f9fc;
+                margin-left: 10px;
+            }

@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <caption></caption>
+    <script src="/Inc/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="/layui/layui.js" type="text/javascript"></script>
+    <link href="/layui/css/layui.css" type="text/css" rel="stylesheet" />
+    <link href="/Table/RevExpress.Table.css" type="text/css" rel="stylesheet" />
+    <script src="/Table/RevExpress.Table.js" type="text/javascript"></script>
+    <script src="/Pager/RevExpress.Pager.js" type="text/javascript"></script>
+
+
+    <meta charset="utf-8" />
+    <style>
+        .mytable tr th {
+            border: 1px solid #f1f1f1;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body style="padding: 10px;">
+
+    <div class="layui-form">
+        <div id="table">
+
+        </div>
+
+        <div id="mytable" class="mytable"></div>
+
+
+
+        <button id="but">确定</button>
+
+    </div>
+
+    <script type="text/javascript">
+
+        var dlist2 = [
+       { caption: "中华人民共合同成立500周年", name: "ga1", tel: "1989882323", content: "征收契税;面积为90平方米以上的，减按1.5%的税率征收契税" },
+       { caption: "热烈欢迎习大大餐馆南昌大学科学技术学院", name: "ga2", tel: "1989882323", content: "征收契税;面积为90平方米以上的，减按1.5%的税率征收契税" },
+       { caption: "热烈庆祝中国航母下水远航", name: "ga3", tel: "1989882323", content: "征收契税;面积为90平方米以上的，减按1.5%的税率征收契税" }
+        ];
+
+
+        var tt = window.myTable;
+        tt.id = "table";
+
+        tt.columns = [
+           
+                    { caption: "姓名", name: "name" },
+                    {
+                        caption: "标题",
+                        name: "caption"
+
+                    }
+                
+            , { caption: "电话", name: "tel" }, { caption: "备注", name: "content" }
+        ];
+
+        tt.pager = {
+            pagesize: 10, currindex: 1, totlecount: 1000, doSkip: function (pageindex) {
+                tt.pager.currindex = parseInt(pageindex);
+                window.doRegisterTable(tt);
+            }
+        }
+        tt.data = dlist2;
+        tt.showExpandRow = true;
+        tt.enableCheckbox = true;
+
+        tt.onCheckBox = function (ids) {
+            alert(ids);
+        }
+
+        tt.headpanel = "<i class='layui-icon'>&#xe67c;</i> 欢迎使用table plugin";
+        tt.onExpandRow = function (id, row) {
+            row.html("sdf" + id);
+        }
+
+
+        var form, element;
+        layui.use(['form', 'element'], function () {
+            form = layui.form;
+            element = layui.element;
+
+            window.doRegisterTable(tt);
+        });
+
+
+
+        function getChecked() {
+            $("input[lay-filter='single']").each(function () {
+                alert($(this).attr("data-id"));
+            });
+
+            window.doRegisterTable(tt);
+            form.render();
+        }
+
+    </script>
+
+    <script>
+
+        var columns = [
+      {
+          caption: '姓名',
+          key: 'name'
+      },
+      {
+          caption: '年龄',
+          key: 'age'
+      },
+      {
+          caption: '爱好',
+          children: [
+            {
+                caption: '看书',
+                key: 'like1',
+                children: [
+                  {
+                      caption: '名著',
+                      key: 'book1'
+                  },
+                  {
+                      caption: '小说',
+                      key: 'book2'
+                  }
+                ]
+            },
+            {
+                caption: '打球',
+                key: 'like2',
+                children: [
+                  {
+                      caption: '篮球',
+                      key: 'ball1'
+                  },
+                  {
+                      caption: '排球',
+                      key: 'ball2'
+                  }, {
+                      caption: '足球',
+                      key: 'ball3',
+                      children: [
+                        {
+                            caption: '足球1',
+                            key: 'ball31'
+                        },
+                        {
+                            caption: '足球2',
+                            key: 'ball32'
+                        }
+                      ]
+                  }
+                ]
+            }
+          ]
+      }
+        ];
+
+        var columnss = [
+            {
+                caption: '姓名',
+                key: 'name'
+            }
+        ];
+
+        var trs = [];
+        var deep = 1;
+
+        var maxRowspan = function (columns) {
+            var obj = null;
+            var flage = false;
+            for (var i = 0; i < columns.length; i++) {
+                if (columns[i].children) {
+                    flage = true;
+                    deep += 1;
+                    obj = columns[i].children;
+                }
+            }
+
+            if (flage) {
+                maxRowspan(obj, deep);
+            }
+        }
+
+        var pushTrs = function (arr) {
+            var rank = arr[0].rank;
+            if (trs[rank]) {
+                $.merge(trs[rank], arr); //合并
+            } else {
+                trs[rank] = arr;
+            }
+        }
+
+
+
+        var foo = function (arr, parent) {
+            for (var i = 0; i < arr.length; i++) {
+                var len = arr[i].children ? arr[i].children.length : 0;
+                arr[i].rank = parent ? parent.rank + 1 : 0;
+                if (len > 0) {//children 存在
+                    arr[i].rowspan = 1;
+                    foo(arr[i].children, arr[i]);
+                } else {//children 不存在
+                    arr[i].colspan = 1;
+                    arr[i].order = true;
+                }
+                if (parent) {//parent的colspan为children的colspan总和
+                    parent.colspan = parent.colspan ? parent.colspan : 0;
+                    parent.colspan += arr[i].colspan;
+                }
+            }
+
+            pushTrs(arr);
+
+            if (arr[0].rank === 0) {//最后一次递归结束
+                return render();
+            }
+            return false;
+        }
+
+        var cloneObj = function (obj) {
+            var newObj = {};
+            if (obj instanceof Array) {
+                newObj = [];
+            }
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    var val = obj[key];
+                    newObj[key] = typeof val === 'object' ? cloneObj(val) : val;
+                }
+            }
+            return newObj;
+        };
+
+        var render = function () {
+            var len = trs.length;
+            var htm = "";
+
+            for (var i = 0; i < trs.length; i++) {
+                htm += "<tr>";
+
+                for (var j = 0 ; j < trs[i].length; j++) {
+                    htm += "<th rowspan='" + (trs[i][j].rowspan ? trs[i][j].rowspan : len - trs[i][j].rank) + "' colspan='" + trs[i][j].colspan + "'>";
+                    htm += trs[i][j].caption;
+                    htm += "</th>";
+                    // console.log(trs[i][j].order ? trs[i][j].caption : "");
+                }
+                htm += "</tr>";
+            }
+            return htm;
+        }
+
+        var c = cloneObj(columns);
+
+        var htm = foo(c);
+        $("#mytable").html(htm);
+
+        $("#but").click(function () {
+
+            trs = [];
+
+            var c = cloneObj(columns);
+            var htm = foo(c);
+            console.log(trs);
+            $("#mytable").html(htm);
+        });
+    </script>
+
+</body>
+</html>

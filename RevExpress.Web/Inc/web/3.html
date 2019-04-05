@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+
+</head>
+<body>
+    我是页面3
+
+    <div id="con"></div>
+
+
+    <script>
+
+
+        var v = {};
+        v.url = "/inc/web/4.html?" + new Date().getTime();
+        httpUtil.doLoadHtml(v, function (mes) {
+            $("#con").html(mes);
+        });
+
+
+    </script>
+</body>
+</html>

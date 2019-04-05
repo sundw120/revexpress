@@ -1,0 +1,43 @@
+﻿ .pager {
+     font-size: 13px;
+     background: #f9f9fc;
+ }
+
+ .pager label[current] {
+     background: #e2eafd;
+     padding: 5px;
+     padding-top: 1px;
+     padding-bottom: 1px;
+     border: 1px solid #c9d7fb;
+     cursor: pointer;
+ }
+
+ .pager label[data-toogle] {
+     padding: 5px;
+     padding-top: 1px;
+     padding-bottom: 1px;
+     cursor: pointer;
+ }
+
+ .pager label[data-start] {
+     padding-left: 10px;
+     cursor: pointer;
+ }
+
+ .pager label[data-next] {
+     padding-left: 10px;
+     cursor: pointer;
+ }
+
+
+ .pager label[data-pre] {
+     padding-right: 10px;
+     cursor: pointer;
+ }
+
+
+ .pager label[data-end] {
+     padding-left: 10px;
+     padding-right: 10px;
+     cursor: pointer;
+ }

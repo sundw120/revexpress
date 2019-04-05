@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/Inc/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="/layui/layui.js" type="text/javascript"></script>
+    <script src="/RevExpress.Toolbar.js" type="text/javascript"></script>
+    <link href="layui/css/layui.css" type="text/css" rel="stylesheet" />
+
+    <link href="RevExpress.Toolbar.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="menubar">
+
+    </div>
+
+    <script type="text/javascript">
+
+        var menubar = {
+            "id": "menubar",
+            "class": "menubar",
+            "icon": "&#xe60a;",
+            "title": [{ "icon": "&#xe62c;", "text": "招生辅助管理系统", "url": "http://www.baidu.com" }, { "icon": "&#xe67c;", "text": "用户信息管理", "url": "http://www.baidu.com" }, { "icon": "", "text": "添加用户信息", "url": "http://www.sina.com" }],
+            "help": { "text": "系统帮助", "url": "" },
+            "option": "目前操作功能：普通高等教育招生计划申报表",
+            "button": [{ "icon": "&#xe654;", "text": "新建用户", "url": "javascript:alert('哈哈哈哈')" }, { "icon": "&#x1006;", "text": "删除全部用户", "url": "" }]
+        };
+        DoRegistMenuBar(menubar);
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+﻿.devexpress_table table {
+    width: 100%;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 1px solid #f1f1f1;
+    margin: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 12px;
+    font-family: Microsoft Yahei, Arail;
+}
+
+    .devexpress_table table th {
+        text-align: center;
+        background: #f9f9fc;
+        border-bottom: 1px solid #f1f1f1;
+        border-right: 1px solid #f1f1f1;
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-weight: normal;
+        height: 22px;
+    }
+
+        .devexpress_table table th[last] {
+            background: #f9f9fc;
+            border-bottom: 1px solid #f1f1f1;
+            border-right: 0px;
+        }
+
+    .devexpress_table table td {
+        text-align: center;
+        border-bottom: 1px solid #f1f1f1;
+        border-right: 1px solid #f1f1f1;
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-weight: normal;
+        height: 22px;
+        cursor: pointer;
+    }
+
+        .devexpress_table table td[last] {
+            cursor: pointer;
+            border-bottom: 1px solid #f1f1f1;
+            border-right: 0px;
+        }
+
+            .devexpress_table table td[last] a[data-id]:link {
+                color: #333;
+            }
+
+.devexpress_table table td[last] a[data-id]:hover {
+    color: #CC3300;
+    text-decoration: underline;
+}
+
+.devexpress_table div[headpanel] {
+    background: url('/dxr.png') #f9f9fc no-repeat right bottom;
+    height: 31px;
+    width: 100%;
+}
+
+    .devexpress_table div[headpanel] div[title] {
+        color: #2f4f4f;
+        padding-top: 8px;
+        padding-left: 10px;
+    }
+
+.devexpress_table div[footpanel] {
+    height: 25px;
+    width: 100%;
+    background: #f9f9fc;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+    .devexpress_table div[footpanel] div[title] {
+        color: #2f4f4f;
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+
+
+
+.devexpress_table td[expand-cell] {
+    width: 5px;
+    border-right: 0px;
+}
+
+    .devexpress_table td[expand-cell] i {
+        font-size: 10px;
+        color: #80838f;
+    }
+
+.devexpress_table td[model-window] {
+    width: 5px;
+    border-right: 0px;
+}
+
+    .devexpress_table td[model-window] i {
+        font-size: 10px;
+        color: #80838f;
+    }
+
+.devexpress_table tr[new-row] td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.devexpress_table th[data-order] {
+    cursor: pointer;
+}
+
+.devexpress_table tr td a[dataclk] {
+    text-decoration: underline;
+}
+
+
+.devexpress_table div[pager] {
+    font-size: 12px;
+    background: #f9f9fc;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+    .devexpress_table div[pager] label[current] {
+        background: #e2eafd;
+        padding: 5px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border: 1px solid #c9d7fb;
+        cursor: pointer;
+    }
+
+    .devexpress_table div[pager] label[data-toogle] {
+        padding: 5px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        cursor: pointer;
+    }
+
+    .devexpress_table div[pager] label[data-start] {
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    .devexpress_table div[pager] label[data-next] {
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+
+    .devexpress_table div[pager] label[data-pre] {
+        padding-right: 10px;
+        cursor: pointer;
+    }
+
+
+    .devexpress_table div[pager] label[data-end] {
+        padding-left: 10px;
+        padding-right: 10px;
+        cursor: pointer;
+    }
+
+
+
+.tCss a {
+    color: brown;
+}

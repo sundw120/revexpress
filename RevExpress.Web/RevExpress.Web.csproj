@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B21BB2B-A63A-40D3-ACE7-BF83345D324B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RevExpress.Web</RootNamespace>
+    <AssemblyName>RevExpress.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DXR.png" />
+    <Content Include="Inc\1.html" />
+    <Content Include="Inc\drag.js" />
+    <Content Include="Inc\HTMLPage1.html" />
+    <Content Include="Inc\HtmlPage2.html" />
+    <Content Include="Inc\jquery-3.3.1.min.js" />
+    <Content Include="Inc\jstools.js" />
+    <Content Include="Inc\layui\layui\css\layui.css" />
+    <Content Include="Inc\layui\layui\css\layui.mobile.css" />
+    <Content Include="Inc\layui\layui\css\modules\code.css" />
+    <Content Include="Inc\layui\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="Inc\layui\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="Inc\layui\layui\css\modules\layer\default\icon.png" />
+    <Content Include="Inc\layui\layui\css\modules\layer\default\layer.css" />
+    <Content Include="Inc\layui\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="Inc\layui\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="Inc\layui\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="Inc\layui\layui\font\iconfont.svg" />
+    <Content Include="Inc\layui\layui\images\face\0.gif" />
+    <Content Include="Inc\layui\layui\images\face\1.gif" />
+    <Content Include="Inc\layui\layui\images\face\10.gif" />
+    <Content Include="Inc\layui\layui\images\face\11.gif" />
+    <Content Include="Inc\layui\layui\images\face\12.gif" />
+    <Content Include="Inc\layui\layui\images\face\13.gif" />
+    <Content Include="Inc\layui\layui\images\face\14.gif" />
+    <Content Include="Inc\layui\layui\images\face\15.gif" />
+    <Content Include="Inc\layui\layui\images\face\16.gif" />
+    <Content Include="Inc\layui\layui\images\face\17.gif" />
+    <Content Include="Inc\layui\layui\images\face\18.gif" />
+    <Content Include="Inc\layui\layui\images\face\19.gif" />
+    <Content Include="Inc\layui\layui\images\face\2.gif" />
+    <Content Include="Inc\layui\layui\images\face\20.gif" />
+    <Content Include="Inc\layui\layui\images\face\21.gif" />
+    <Content Include="Inc\layui\layui\images\face\22.gif" />
+    <Content Include="Inc\layui\layui\images\face\23.gif" />
+    <Content Include="Inc\layui\layui\images\face\24.gif" />
+    <Content Include="Inc\layui\layui\images\face\25.gif" />
+    <Content Include="Inc\layui\layui\images\face\26.gif" />
+    <Content Include="Inc\layui\layui\images\face\27.gif" />
+    <Content Include="Inc\layui\layui\images\face\28.gif" />
+    <Content Include="Inc\layui\layui\images\face\29.gif" />
+    <Content Include="Inc\layui\layui\images\face\3.gif" />
+    <Content Include="Inc\layui\layui\images\face\30.gif" />
+    <Content Include="Inc\layui\layui\images\face\31.gif" />
+    <Content Include="Inc\layui\layui\images\face\32.gif" />
+    <Content Include="Inc\layui\layui\images\face\33.gif" />
+    <Content Include="Inc\layui\layui\images\face\34.gif" />
+    <Content Include="Inc\layui\layui\images\face\35.gif" />
+    <Content Include="Inc\layui\layui\images\face\36.gif" />
+    <Content Include="Inc\layui\layui\images\face\37.gif" />
+    <Content Include="Inc\layui\layui\images\face\38.gif" />
+    <Content Include="Inc\layui\layui\images\face\39.gif" />
+    <Content Include="Inc\layui\layui\images\face\4.gif" />
+    <Content Include="Inc\layui\layui\images\face\40.gif" />
+    <Content Include="Inc\layui\layui\images\face\41.gif" />
+    <Content Include="Inc\layui\layui\images\face\42.gif" />
+    <Content Include="Inc\layui\layui\images\face\43.gif" />
+    <Content Include="Inc\layui\layui\images\face\44.gif" />
+    <Content Include="Inc\layui\layui\images\face\45.gif" />
+    <Content Include="Inc\layui\layui\images\face\46.gif" />
+    <Content Include="Inc\layui\layui\images\face\47.gif" />
+    <Content Include="Inc\layui\layui\images\face\48.gif" />
+    <Content Include="Inc\layui\layui\images\face\49.gif" />
+    <Content Include="Inc\layui\layui\images\face\5.gif" />
+    <Content Include="Inc\layui\layui\images\face\50.gif" />
+    <Content Include="Inc\layui\layui\images\face\51.gif" />
+    <Content Include="Inc\layui\layui\images\face\52.gif" />
+    <Content Include="Inc\layui\layui\images\face\53.gif" />
+    <Content Include="Inc\layui\layui\images\face\54.gif" />
+    <Content Include="Inc\layui\layui\images\face\55.gif" />
+    <Content Include="Inc\layui\layui\images\face\56.gif" />
+    <Content Include="Inc\layui\layui\images\face\57.gif" />
+    <Content Include="Inc\layui\layui\images\face\58.gif" />
+    <Content Include="Inc\layui\layui\images\face\59.gif" />
+    <Content Include="Inc\layui\layui\images\face\6.gif" />
+    <Content Include="Inc\layui\layui\images\face\60.gif" />
+    <Content Include="Inc\layui\layui\images\face\61.gif" />
+    <Content Include="Inc\layui\layui\images\face\62.gif" />
+    <Content Include="Inc\layui\layui\images\face\63.gif" />
+    <Content Include="Inc\layui\layui\images\face\64.gif" />
+    <Content Include="Inc\layui\layui\images\face\65.gif" />
+    <Content Include="Inc\layui\layui\images\face\66.gif" />
+    <Content Include="Inc\layui\layui\images\face\67.gif" />
+    <Content Include="Inc\layui\layui\images\face\68.gif" />
+    <Content Include="Inc\layui\layui\images\face\69.gif" />
+    <Content Include="Inc\layui\layui\images\face\7.gif" />
+    <Content Include="Inc\layui\layui\images\face\70.gif" />
+    <Content Include="Inc\layui\layui\images\face\71.gif" />
+    <Content Include="Inc\layui\layui\images\face\8.gif" />
+    <Content Include="Inc\layui\layui\images\face\9.gif" />
+    <Content Include="Inc\layui\layui\layui.all.js" />
+    <Content Include="Inc\layui\layui\layui.js" />
+    <Content Include="Inc\layui\layui\lay\modules\carousel.js" />
+    <Content Include="Inc\layui\layui\lay\modules\code.js" />
+    <Content Include="Inc\layui\layui\lay\modules\colorpicker.js" />
+    <Content Include="Inc\layui\layui\lay\modules\element.js" />
+    <Content Include="Inc\layui\layui\lay\modules\flow.js" />
+    <Content Include="Inc\layui\layui\lay\modules\form.js" />
+    <Content Include="Inc\layui\layui\lay\modules\jquery.js" />
+    <Content Include="Inc\layui\layui\lay\modules\laydate.js" />
+    <Content Include="Inc\layui\layui\lay\modules\layedit.js" />
+    <Content Include="Inc\layui\layui\lay\modules\layer.js" />
+    <Content Include="Inc\layui\layui\lay\modules\laypage.js" />
+    <Content Include="Inc\layui\layui\lay\modules\laytpl.js" />
+    <Content Include="Inc\layui\layui\lay\modules\mobile.js" />
+    <Content Include="Inc\layui\layui\lay\modules\rate.js" />
+    <Content Include="Inc\layui\layui\lay\modules\slider.js" />
+    <Content Include="Inc\layui\layui\lay\modules\table.js" />
+    <Content Include="Inc\layui\layui\lay\modules\tree.js" />
+    <Content Include="Inc\layui\layui\lay\modules\upload.js" />
+    <Content Include="Inc\layui\layui\lay\modules\util.js" />
+    <Content Include="Inc\test2.html" />
+    <Content Include="Inc\web\5.html" />
+    <Content Include="Inc\web\6.html" />
+    <Content Include="Inc\web\4.html" />
+    <Content Include="Inc\web\3.html" />
+    <Content Include="Inc\web\2.html" />
+    <Content Include="Inc\web\1.html" />
+    <Content Include="layui\css\layui.css" />
+    <Content Include="layui\css\layui.mobile.css" />
+    <Content Include="layui\css\modules\code.css" />
+    <Content Include="layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="layui\css\modules\layer\default\icon.png" />
+    <Content Include="layui\css\modules\layer\default\layer.css" />
+    <Content Include="layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="layui\font\iconfont.svg" />
+    <Content Include="layui\images\face\0.gif" />
+    <Content Include="layui\images\face\1.gif" />
+    <Content Include="layui\images\face\10.gif" />
+    <Content Include="layui\images\face\11.gif" />
+    <Content Include="layui\images\face\12.gif" />
+    <Content Include="layui\images\face\13.gif" />
+    <Content Include="layui\images\face\14.gif" />
+    <Content Include="layui\images\face\15.gif" />
+    <Content Include="layui\images\face\16.gif" />
+    <Content Include="layui\images\face\17.gif" />
+    <Content Include="layui\images\face\18.gif" />
+    <Content Include="layui\images\face\19.gif" />
+    <Content Include="layui\images\face\2.gif" />
+    <Content Include="layui\images\face\20.gif" />
+    <Content Include="layui\images\face\21.gif" />
+    <Content Include="layui\images\face\22.gif" />
+    <Content Include="layui\images\face\23.gif" />
+    <Content Include="layui\images\face\24.gif" />
+    <Content Include="layui\images\face\25.gif" />
+    <Content Include="layui\images\face\26.gif" />
+    <Content Include="layui\images\face\27.gif" />
+    <Content Include="layui\images\face\28.gif" />
+    <Content Include="layui\images\face\29.gif" />
+    <Content Include="layui\images\face\3.gif" />
+    <Content Include="layui\images\face\30.gif" />
+    <Content Include="layui\images\face\31.gif" />
+    <Content Include="layui\images\face\32.gif" />
+    <Content Include="layui\images\face\33.gif" />
+    <Content Include="layui\images\face\34.gif" />
+    <Content Include="layui\images\face\35.gif" />
+    <Content Include="layui\images\face\36.gif" />
+    <Content Include="layui\images\face\37.gif" />
+    <Content Include="layui\images\face\38.gif" />
+    <Content Include="layui\images\face\39.gif" />
+    <Content Include="layui\images\face\4.gif" />
+    <Content Include="layui\images\face\40.gif" />
+    <Content Include="layui\images\face\41.gif" />
+    <Content Include="layui\images\face\42.gif" />
+    <Content Include="layui\images\face\43.gif" />
+    <Content Include="layui\images\face\44.gif" />
+    <Content Include="layui\images\face\45.gif" />
+    <Content Include="layui\images\face\46.gif" />
+    <Content Include="layui\images\face\47.gif" />
+    <Content Include="layui\images\face\48.gif" />
+    <Content Include="layui\images\face\49.gif" />
+    <Content Include="layui\images\face\5.gif" />
+    <Content Include="layui\images\face\50.gif" />
+    <Content Include="layui\images\face\51.gif" />
+    <Content Include="layui\images\face\52.gif" />
+    <Content Include="layui\images\face\53.gif" />
+    <Content Include="layui\images\face\54.gif" />
+    <Content Include="layui\images\face\55.gif" />
+    <Content Include="layui\images\face\56.gif" />
+    <Content Include="layui\images\face\57.gif" />
+    <Content Include="layui\images\face\58.gif" />
+    <Content Include="layui\images\face\59.gif" />
+    <Content Include="layui\images\face\6.gif" />
+    <Content Include="layui\images\face\60.gif" />
+    <Content Include="layui\images\face\61.gif" />
+    <Content Include="layui\images\face\62.gif" />
+    <Content Include="layui\images\face\63.gif" />
+    <Content Include="layui\images\face\64.gif" />
+    <Content Include="layui\images\face\65.gif" />
+    <Content Include="layui\images\face\66.gif" />
+    <Content Include="layui\images\face\67.gif" />
+    <Content Include="layui\images\face\68.gif" />
+    <Content Include="layui\images\face\69.gif" />
+    <Content Include="layui\images\face\7.gif" />
+    <Content Include="layui\images\face\70.gif" />
+    <Content Include="layui\images\face\71.gif" />
+    <Content Include="layui\images\face\8.gif" />
+    <Content Include="layui\images\face\9.gif" />
+    <Content Include="layui\layui.all.js" />
+    <Content Include="layui\layui.js" />
+    <Content Include="layui\lay\modules\carousel.js" />
+    <Content Include="layui\lay\modules\code.js" />
+    <Content Include="layui\lay\modules\element.js" />
+    <Content Include="layui\lay\modules\flow.js" />
+    <Content Include="layui\lay\modules\form.js" />
+    <Content Include="layui\lay\modules\jquery.js" />
+    <Content Include="layui\lay\modules\laydate.js" />
+    <Content Include="layui\lay\modules\layedit.js" />
+    <Content Include="layui\lay\modules\layer.js" />
+    <Content Include="layui\lay\modules\laypage.js" />
+    <Content Include="layui\lay\modules\laytpl.js" />
+    <Content Include="layui\lay\modules\mobile.js" />
+    <Content Include="layui\lay\modules\table.js" />
+    <Content Include="layui\lay\modules\tree.js" />
+    <Content Include="layui\lay\modules\upload.js" />
+    <Content Include="layui\lay\modules\util.js" />
+    <Content Include="Pager\Pager.html" />
+    <Content Include="Pager\RevExpress.Pager.css" />
+    <Content Include="Pager\RevExpress.Pager.js" />
+    <Content Include="Search\RevExpress.Search.css" />
+    <Content Include="Search\Search.html" />
+    <Content Include="Table\RevExpress.Table.css" />
+    <Content Include="Toolbar\RevExpress.Toolbar.css" />
+    <Content Include="Toolbar\RevExpress.Toolbar.js" />
+    <Content Include="Table\RevExpress.Table.js" />
+    <Content Include="Table\Table.html" />
+    <Content Include="Toolbar\Tools.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="layui\font\iconfont.eot" />
+    <Content Include="layui\font\iconfont.ttf" />
+    <Content Include="layui\font\iconfont.woff" />
+    <Content Include="Search\RevExpress.Search.js" />
+    <Content Include="Inc\layui\layui\font\iconfont.eot" />
+    <Content Include="Inc\layui\layui\font\iconfont.ttf" />
+    <Content Include="Inc\layui\layui\font\iconfont.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49397</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49397/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

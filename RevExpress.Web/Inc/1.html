@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="layui/layui/layui.js" type="text/javascript"></script>
+    <script src="jstools.js" type="text/javascript"></script>
+
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <div id="no">
+
+        <input type="text" />
+
+        <div id="form">
+            <input oid="name" value="123A@123" required="required" datatype="passwordComplexity" type="password" />
+            <input oid="pwd" value="18979119293" regex="^1[3578][0-9]{9}$" type="text" />
+
+            <select oid="sel" errmsg="考生性别必须选择，请选择" required="required">
+                <option value="">请选择</option>
+                <option value="1" selected="selected">选项1</option>
+                <option value="2">选项2</option>
+                <option value="3">选项3</option>
+                <option value="4">选项4</option>
+
+            </select>
+
+            <input required="required" checked="checked" errmsg="chk必须选择一个，请尽快选择" oid="chk" type="checkbox" value="1" />
+            <input oid="chk" type="checkbox" value="2" />
+
+            <input checked="checked" oid="sex" type="checkbox" value="男" />
+
+            <input name="radio" required="required" errmsg="radio不能伟空" oid="xingbie" type="radio" value="r1" />性别男
+            <input name="radio" oid="xingbie" type="radio" value="r2" />性别女
+
+            <input name="radio1" required="required" errmsg="radio不能伟空" oid="xs" type="radio" value="r3" />性别男1
+            <input name="radio1" oid="xs" type="radio" value="r4" />性别女1
+
+
+            <input id="butSubmit" type="button" value="提交数据" />
+        </div>
+
+    </div>
+
+    <script>
+
+
+
+
+        layui.use('form', function () {
+            var form = layui.form;
+            var layer = layui.layer;
+
+
+
+            $("#butSubmit").click(function () {
+
+                var start = new Date().getTime();
+
+
+                var v = {};
+                v.url = "";
+
+                formUtil.validate(v, function (ret) {
+                    if (ret) {
+                        layer.msg("数据提交成功");
+
+                        var end = new Date().getTime();
+                        console.log("耗时：" + (end - start) + "毫秒");
+                    }
+                });
+
+                /*
+                var oid = [];
+                     var checkbox = document.getElementsByTagName("input");
+
+                     var hs = new hashmapUtil.Hashmap();
+                     for (var i = 0; i < checkbox.length; i++) {
+                         if (checkbox[i].type === "checkbox") {
+                             hs.put(checkbox[i].getAttribute("oid"));
+                         }
+                     }
+
+                     var v = {};
+                     v.data = {};
+
+                     $.each(hs.keySet(), function (index, item) {
+                         var chks = $("input[type=checkbox][oid='" + item + "']");
+                         var isRequired = false;
+                         var checkvalues = "";
+                         var errmsg = "";
+                         $.each(chks, function (inx, itm) {
+                             if (!stringUtils.isEmpty($(itm).attr("required"))) {
+                                 isRequired = true;
+                                 errmsg = stringUtils.isEmpty($(itm).attr("errmsg")) ? errorMessage.nullerror : $(itm).attr("errmsg");
+                             }
+
+                             if (itm.checked) {
+                                 checkvalues += itm.value + ",";
+                             }
+
+                         });
+
+                         if (isRequired) {
+                             //校验必须有一个选择项目
+                             if (stringUtils.isEmpty(checkvalues)) {
+                                 alert(errmsg);
+                                 return false;
+                             }
+                         }
+
+                         if (!stringUtils.isEmpty(checkvalues)) {
+                             v.data[item] = checkvalues.substr(0, checkvalues.length - 1);
+                         }
+                         return true;
+                     });*/
+
+                console.log(v);
+
+            });
+        });
+
+
+
+
+
+        (function () {
+            function doLoad(v) {
+                this.url = v.url || "http://www.baidu.com";
+                this.init();
+            }
+
+            doLoad.prototype = {
+                init: function () {
+                    this.load();
+                },
+                load: function () {
+                    var url = this.url;
+                    layui.use('layer', function () {
+                        alert(url);
+                    });
+
+                }
+            };
+
+            window.doLoad = doLoad;
+
+        })();
+
+
+    </script>
+
+</body>
+</html>
